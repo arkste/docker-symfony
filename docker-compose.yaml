@@ -53,7 +53,7 @@ services:
     db:
         image: mysql:5.7
         env_file:
-          - .env
+            - .env
         volumes:
             - db_data:/var/lib/mysql
             - ./.docker/mysql/conf.d:/etc/mysql/conf.d
