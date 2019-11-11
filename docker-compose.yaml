@@ -3,6 +3,8 @@ version: "3"
 services:
     traefik:
         image: traefik:v1.7
+        env_file:
+            - .env
         ports:
             - 80:80
             - 443:443
@@ -19,6 +21,8 @@ services:
 
     nginx:
         image: nginx:1.17-alpine
+        env_file:
+            - .env
         volumes:
             - ./Source:/var/www
             - ./.docker/nginx/conf/nginx.conf:/etc/nginx/nginx.conf
@@ -34,6 +38,8 @@ services:
             - traefik.basic.port=80
 
     php:
+        env_file:
+            - .env
         build:
             args:
               USER_ID: ${USER_ID}
@@ -68,6 +74,8 @@ services:
 
     adminer:
         image: adminer
+        env_file:
+            - .env
         networks:
             - internal
             - proxy
@@ -79,6 +87,8 @@ services:
 
     blackfire:
         image: blackfire/blackfire
+        env_file:
+            - .env
         networks:
             - internal
         labels:
@@ -86,6 +96,8 @@ services:
 
     mailhog:
         image: mailhog/mailhog
+        env_file:
+            - .env
         networks:
             - internal
             - proxy
