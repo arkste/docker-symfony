@@ -46,11 +46,11 @@ services:
             context: ./.docker/php
         volumes:
             - ./Source:/var/www
-            - ./.docker/php/conf/cli.ini:/etc/php/7.3/cli/conf.d/zz-symfony.ini
-            - ./.docker/php/conf/fpm.ini:/etc/php/7.3/fpm/conf.d/zz-symfony.ini
-            - ./.docker/php/conf/xdebug.ini:/etc/php/7.3/fpm/conf.d/zz-xdebug.ini
-            - ./.docker/php/conf/opcache.ini:/etc/php/7.3/fpm/conf.d/zz-opcache.ini
-            - ./.docker/php/conf/pool.conf:/etc/php/7.3/fpm/pool.d/www.conf
+            - ./.docker/php/conf/cli.ini:/etc/php/7.4/cli/conf.d/zz-symfony.ini
+            - ./.docker/php/conf/fpm.ini:/etc/php/7.4/fpm/conf.d/zz-symfony.ini
+            - ./.docker/php/conf/xdebug.ini:/etc/php/7.4/fpm/conf.d/zz-xdebug.ini
+            - ./.docker/php/conf/opcache.ini:/etc/php/7.4/fpm/conf.d/zz-opcache.ini
+            - ./.docker/php/conf/pool.conf:/etc/php/7.4/fpm/pool.d/www.conf
         networks:
             - internal
         labels:
