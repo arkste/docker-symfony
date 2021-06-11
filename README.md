@@ -1,10 +1,10 @@
 docker-symfony
 ==============
 
-This is my basic docker stack for developing Symfony (4 & 5) Apps.
+This is my basic docker stack for developing Symfony-Apps.
 
 - Traefik (http://traefik.symfony.local)
-- PHP 7.4 (+ Node.js, Yarn & Ansible, see the [Dockerfile](https://github.com/arkste/docker-ci/blob/php74/Dockerfile))
+- PHP 8.0 (+ Node.js, Yarn & Ansible, see the [Dockerfile](https://github.com/arkste/docker-ci/blob/php80/Dockerfile))
 - Xdebug (Port 9000)
 - Blackfire (Agent & Probe)
 - Nginx 1.17 (http://symfony.local)
