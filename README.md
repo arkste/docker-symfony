@@ -8,7 +8,7 @@ This is my basic docker stack for developing Symfony-Apps.
 - Xdebug (Port 9000)
 - Blackfire (Agent & Probe)
 - Nginx 1.17 (http://symfony.local)
-- MySQL 5.7
+- PostgreSQL 13
 - Adminer (http://db.symfony.local)
 - Mailhog (http://mail.symfony.local)
 
@@ -38,4 +38,4 @@ then go to http://symfony.local
 Because most of my servers are running Ubuntu with PHP built by `ondrej/php` and i want to be as close as possible to the target system while developing. The PHP-Container has the recent Node.js- + Yarn-Version installed, which is necessary if you're using Symfony's [Webpack Encore](https://symfony.com/doc/current/frontend/encore/installation.html).
 
 * Why is X missing?
-You're free to customize it for your needs. Like PostgreSQL instead of MySQL, Redis, RabbitMQ, etc.
+You're free to customize it for your needs. Like adding Redis, RabbitMQ, etc.

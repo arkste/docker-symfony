@@ -57,16 +57,11 @@ services:
             - traefik.enable=false
 
     db:
-        image: mysql:5.7
+        image: postgres:13-alpine
         env_file:
             - .env
         volumes:
-            - db_data:/var/lib/mysql
-            - ./.docker/mysql/conf.d:/etc/mysql/conf.d
-        command:
-            - --character-set-server=utf8mb4
-            - --collation-server=utf8mb4_unicode_ci
-            - --skip-character-set-client-handshake
+            - db_data:/var/lib/postgresql/data/pgdata
         networks:
             - internal
         labels:
